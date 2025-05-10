@@ -102,13 +102,21 @@ def main():
     
     # Fetch and prepare data
     @st.cache_data(show_spinner=False)
-    def get_data(ticker, start_date, end_date):
+def get_data(ticker, start_date, end_date):
+    if start_date >= end_date:
+        st.error("Start date must be earlier than end date.")
+        return None
+    try:
         with st.spinner(f'Fetching {ticker} data from Yahoo Finance...'):
             data = yf.download(ticker, start=start_date, end=end_date)
-            if data.empty:
-                st.error("No data found for this stock ticker. Please try a different one.")
+            if data is None or data.empty:
+                st.error("No data found for this stock ticker and date range. Please try again.")
                 return None
             return data
+    except Exception as e:
+        st.error(f"Error fetching data: {e}")
+        return None
+
     
     data = get_data(ticker, start_date, end_date)
     
