@@ -1,2 +1,62 @@
-# Stock-Market-Predictor
-This website uses some deep learning models like LSTM to predict the stock prices of some companies and cryptocurrency. The model is trained on LSTM
+AI Stock Market Predictor
+This is a Streamlit web application that uses an LSTM neural network to predict stock closing prices for selected tickers using historical data from Yahoo Finance. It allows users to select a stock ticker, date range, and model parameters, and then trains a neural network to generate and visualize predictions.
+
+ Features
+ Interactive UI with Streamlit
+
+ LSTM-based deep learning model for time-series forecasting
+
+ Custom date selection for historical stock data
+
+ Visualization of historical and predicted stock prices
+
+ Download predictions as CSV
+
+ Adjustable model parameters (epochs, batch size, training data split)
+
+ Clean UI with custom CSS styling
+
+ Session state caching to avoid retraining for the same ticker
+
+Built With
+Streamlit
+TensorFlow / Keras
+Scikit-learn
+Yahoo Finance API
+Matplotlib
+NumPy
+Pandas
+
+Installation:
+git clone https://github.com/yourusername/ai-stock-predictor.git
+cd ai-stock-predictor
+
+Install dependencies:
+It's recommended to use a virtual environment.
+pip install -r requirements.txt
+
+requirements.txt should include:
+streamlit
+numpy
+pandas
+matplotlib
+yfinance
+scikit-learn
+tensorflow
+
+Run the app:
+streamlit run app_LSTM.py
+
+How It Works
+User selects a stock ticker, date range, and model parameters.
+
+Historical stock data is fetched using yfinance.
+
+Closing prices are scaled and converted into 100-timestep sequences for LSTM input.
+
+The model is trained on the training portion of the data.
+
+Predictions are made on the test portion and plotted alongside actual values.
+
+Users can view raw prediction data and download results as CSV.
+
