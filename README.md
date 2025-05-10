@@ -27,10 +27,6 @@ Matplotlib
 NumPy
 Pandas
 
-Installation:
-git clone https://github.com/yourusername/ai-stock-predictor.git
-cd ai-stock-predictor
-
 Install dependencies:
 It's recommended to use a virtual environment.
 pip install -r requirements.txt
@@ -47,7 +43,7 @@ tensorflow
 Run the app:
 streamlit run app_LSTM.py
 
-How It Works
+How It Works:
 User selects a stock ticker, date range, and model parameters.
 
 Historical stock data is fetched using yfinance.
