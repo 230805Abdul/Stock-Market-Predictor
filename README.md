@@ -1,4 +1,5 @@
-AI Stock Market Predictor
+AI Crypto Market Predictor
+
 This is a Streamlit web application that uses an LSTM neural network to predict stock closing prices for selected tickers using historical data from Binance. It allows users to select a stock ticker, date range, and model parameters, and then trains a neural network to generate and visualize predictions.
 
  Features
