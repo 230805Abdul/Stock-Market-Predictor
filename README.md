@@ -1,5 +1,5 @@
 AI Stock Market Predictor
-This is a Streamlit web application that uses an LSTM neural network to predict stock closing prices for selected tickers using historical data from Yahoo Finance. It allows users to select a stock ticker, date range, and model parameters, and then trains a neural network to generate and visualize predictions.
+This is a Streamlit web application that uses an LSTM neural network to predict stock closing prices for selected tickers using historical data from Binance. It allows users to select a stock ticker, date range, and model parameters, and then trains a neural network to generate and visualize predictions.
 
  Features
  Interactive UI with Streamlit
@@ -22,7 +22,7 @@ Built With
 Streamlit
 TensorFlow / Keras
 Scikit-learn
-Yahoo Finance API
+Python-Binance
 Matplotlib
 NumPy
 Pandas
@@ -36,7 +36,7 @@ streamlit
 numpy
 pandas
 matplotlib
-yfinance
+python-binance
 scikit-learn
 tensorflow
 
@@ -46,7 +46,7 @@ streamlit run app_LSTM.py
 How It Works:
 User selects a stock ticker, date range, and model parameters.
 
-Historical stock data is fetched using yfinance.
+Historical stock data is fetched using binance.
 
 Closing prices are scaled and converted into 100-timestep sequences for LSTM input.
 
